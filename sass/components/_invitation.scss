@@ -85,6 +85,8 @@
 }
 .invitation__button {
 	color: $bg-color;
+	animation: breathing-light 2000ms normal infinite;
+	animation-delay: 5.9s;
 	
 	&:hover{
 		color: rgba(42, 42, 42, 0.8);

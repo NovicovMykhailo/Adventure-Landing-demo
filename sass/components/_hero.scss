@@ -13,11 +13,11 @@
 	position: relative;
 	animation: animatetop 1200ms;
 }
-.animation-second{
-    position: relative;
+.animation-second {
+	position: relative;
 	animation: animatebottom 900ms;
-    animation-delay: 900ms;
-    animation-fill-mode: backwards;
+	animation-delay: 900ms;
+	animation-fill-mode: backwards;
 }
 
 .hero__subtitle {
@@ -27,64 +27,29 @@
 	margin: 0 auto;
 	letter-spacing: 0.25rem;
 	color: rgba(255, 255, 255, 0.8);
-    position: relative;
-    animation: animateleft 900ms;
-    animation-delay: 1500ms;
-    animation-fill-mode: backwards;
-	
+	position: relative;
+	animation: animateleft 900ms;
+	animation-delay: 1500ms;
+	animation-fill-mode: backwards;
 }
 
+.hero__icon-wrapper {
 
-.hero__icon-wrapper{
-	display: block;
+	display: inline-block;
 	fill: rgba(128, 128, 128, 0.5);
 	position: relative;
-	animation: animatetop_arrow 1200ms;
+	animation: animatetop_arrow 1200ms , breathing 2000ms normal infinite;
 	animation-delay: 1700ms;
-	top: 220px;
+	top: 230px;
 	animation-fill-mode: backwards;
-
+	transition: scale 300ms ease-in-out;
+	&:hover, &:focus{
+		scale: (1.4);
+		animation-play-state: paused;
+	}
+}
+.hero__arrow-icon {
+	animation: 5s ease-out infinite normal;
 }
 
 
-@keyframes animatetop {
-	from {
-		top: -300px;
-		opacity: 0;
-	}
-	to {
-		top: 0;
-		opacity: 1;
-	}
-}
-@keyframes animateleft {
-	from {
-		left: -300px;
-		opacity: 0;
-	}
-	to {
-		left: 0;
-		opacity: 1;
-	}
-}
-@keyframes animatebottom {
-	from {
-		bottom: -300px;
-		opacity: 0;
-	}
-	to {
-		bottom: 0;
-		opacity: 1;
-	}
-}
-@keyframes animatetop_arrow {
-	from {
-		top: -300px;
-		opacity: 0;
-	}
-
-	to {
-		top: 220px;
-		opacity: 1;
-	}
-}

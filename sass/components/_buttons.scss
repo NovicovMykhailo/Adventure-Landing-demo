@@ -12,11 +12,13 @@
     font-size: 14px;
     letter-spacing: 0.1em;
     font-weight: 600;
-    transition: color 400ms ease-in-out, transform 400ms ease, border-radius 500ms ease-in-out 400ms;
+    transition: color 400ms ease-in-out, transform 400ms ease, border-radius 500ms ease-in-out 400ms,
+    scale 300ms ease-in-out;
     &:hover, &:focus{
-        transform: scale(1.1);
+        scale: 1.2;
         border-radius: 4px;
         color: #fff;
+        animation-play-state: paused;
     }
 
 }
