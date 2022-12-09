@@ -326,6 +326,33 @@ html {
   font-weight: 500;
 }
 
+.pointer {
+  fill: #3a6aa7;
+  outline: 1px solid red;
+  height: 40px;
+  width: auto;
+}
+.pointer:nth-child(1) {
+  position: absolute;
+  top: 25px;
+  left: 52px;
+}
+.pointer:nth-child(2) {
+  position: absolute;
+  top: 180px;
+  left: 197px;
+}
+.pointer:nth-child(3) {
+  position: absolute;
+  top: 76px;
+  left: 308px;
+}
+.pointer:nth-child(4) {
+  position: absolute;
+  top: 179px;
+  left: 419px;
+}
+
 .invitation {
   background-image: url(../images/8489c5e2eb1c696fba409c94e0ca77d1.png);
   padding-top: 0;
