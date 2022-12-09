@@ -1,0 +1,44 @@
+.travel{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.travel__image{
+    transform: translateY(-160px);
+}
+.travel__map-tumb{
+    display: flex;
+    align-items: center;
+    background-image: url(./images/41695f7aabdb8eaa9fd6df8a3f7d4473.png);
+    block-size: contain;
+    background-position: bottom;
+    
+}
+
+.travel__thumb{
+    padding-left: 60px;
+    padding-right: 43px;
+    text-align: left;
+    width: 50%;
+    padding-bottom: 90px;
+}   
+.travel__map{
+    width: 50%;
+    position: relative;
+}
+
+.travel__subtitle{
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin-bottom: 20px;
+}
+.travel_description{
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 500;
+}
+.pointer{
+    color: tomato;
+    outline: 1px solid red;
+
+}

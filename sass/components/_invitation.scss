@@ -1,0 +1,42 @@
+.invitation {
+background-image: url(./images/8489c5e2eb1c696fba409c94e0ca77d1.png);
+padding-top: 0;
+background-position: top;
+display: flex;
+align-items: center;
+}
+
+.invitation__gallery{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 33.333%;
+   
+    gap: 20px;
+}
+
+
+.invitation__text-thumb{
+    width: 50%;
+    text-align: left;
+    padding: 20px;
+}
+.invitation__photo{
+    width: 300px;
+    &:nth-child(1){
+        height: calc(((598px - 2*60px) - 20px) /2);
+    }
+    &:nth-child(2){
+        height: calc(((598px - 2*60px) - 20px) /2);
+    }
+    &:nth-child(3){
+        height: 100px;
+    }
+    // // &:nth-child(4){
+    // //     height: calc(((598px - 2*60px) - 40px) /3);
+    // // }
+    // // &:nth-child(5){
+    // //     height: calc(((598px - 2*60px) - 40px) /3);
+    // }
+

@@ -1,0 +1,29 @@
+.about{
+    text-align: center;
+
+}
+.about__title{
+    width: 540px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    letter-spacing: 0.01em;
+    margin-bottom: 20px;
+}
+.about__subtitle{
+    color: $primaryTextColor;
+    margin-bottom: 60px;
+}
+.about__thumb{
+    text-align: left;
+    display: flex;
+    flex-basis: calc((600px - 2*20px) /2);
+    gap: 100px;
+    padding: 0 250px;
+    margin-bottom: 80px;
+}
+.about__image{
+    display: block;
+    width: calc(100% / 4);
+    margin: 0 auto;
+}

@@ -1,0 +1,18 @@
+.hero {
+    background-image: url(./images/2b1966ee8e9994d4051d1154196acc0e.jpeg);
+    background-repeat: no-repeat;
+    height: 800px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    clip-path: polygon(0% 0%, 100% 0, 100% 75%, 50% 100%, 0 75%);
+}
+.hero__subtitle{
+    width: 534px;
+    font-weight: 500;
+    display: block;
+    margin: 0 auto;
+    letter-spacing: 0.25rem;
+    color: rgba(255, 255, 255,0.8);
+}

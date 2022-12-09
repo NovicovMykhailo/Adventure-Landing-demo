@@ -1,0 +1,28 @@
+html {
+    scroll-behavior: smooth;
+
+  }
+
+.body{
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    background-color: $white-color;
+	color: $primaryTextColor;
+	font-family: "Roboto", sans-serif;
+	font-weight: normal;
+	font-size: 14px;
+	letter-spacing: 0.03em;
+	line-height: 1.5;
+
+    
+}
+
+.container{
+	width: $desktop;
+	margin: 0 auto;
+	text-align: center;
+	
+}
+.section{
+	padding: 60px;
+}
