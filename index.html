@@ -15,7 +15,7 @@
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css "
 		/>
-		<link rel="stylesheet" href="./main.css" />
+		<link rel="stylesheet" href="./css/main.css"/>
 	</head>
 	<body>
 		<!-- HERO -->
@@ -61,9 +61,9 @@
 			<a class="button gallery__button" href="">View more</a>
 		</section>
 		<!-- Where to go -->
-		<section class="travel section container">
+		<section class="travel  container">
 			<img class="travel__image" src="./images/358031b08eefaf6dd090cf867882e7b6.png" alt="" width="1200" height="812" />
-			<div class="travel__map-tumb">
+			<div class="travel__map-thumb">
 				<div class="travel__thumb">
 					<h2 class="title travel__title">Where to go?</h2>
 					<p class="travel__subtitle">Explore the world to find the destination of your choice.</p>
@@ -76,42 +76,43 @@
 					</p>
 				</div>
 				<div class="travel__map">
+					
+					<svg class="pointer" width="32" height="32">
+						<use href="./images/symbol-defs#pointer"></use>
+					</svg>
+					<svg class="pointer" width="32" height="32">
+						<use href="./images/symbol-defs#pointer"></use>
+					</svg>
+					<svg class="pointer" width="32" height="32">
+						<use href="./images/symbol-defs#pointer"></use>
+					</svg>
+					<svg class="pointer" width="32" height="32">
+						<use href="./images/symbol-defs#pointer"></use>
+					</svg>
 					<img src="./images/c1ae1fd2697c8ef94d63084207a803de.png" alt="" width="950" height="510" />
-					<svg class="pointer" width="32" height="32">
-						<use href="./images/symbol-defs#pointer"></use>
-					</svg>
-					<svg class="pointer" width="32" height="32">
-						<use href="./images/symbol-defs#pointer"></use>
-					</svg>
-					<svg class="pointer" width="32" height="32">
-						<use href="./images/symbol-defs#pointer"></use>
-					</svg>
-					<svg class="pointer" width="32" height="32">
-						<use href="./images/symbol-defs#pointer"></use>
-					</svg>
 				</div>
 			</div>
 		</section>
 		<!-- Invitation -->
 		<section class="invitation section container">
 			<div class="invitation__gallery">
-					<img class="invitation__photo" src="./images/1840d536f0cc6d2a5dcb5ba966b2a8cd.jpeg" alt="" />
-					<img class="invitation__photo" src="./images/2642b78d1066af1ad666544184a1b519.jpeg" alt="" />
-					<img class="invitation__photo" src="./images/39db8cdd268c8c72f24cb3f97f0ffe03.jpeg" alt="" />
-					<img class="invitation__photo" src="./images/2b1966ee8e9994d4051d1154196acc0e.jpeg" alt="" />
-					<img class="invitation__photo" src="./images/c280cce5b798a3de3cd815dfbe6d6aca.jpeg" alt="" />
-					<img class="invitation__photo" src="./images/83a646c2e38520ce87aae57f3854ce70.jpeg" alt="" />
-					<img class="invitation__photo" src="./images/2dc75a8e9e53f1bb9dd451feb100dc6c.jpeg" alt="" />
+				<img class="invitation__photo" src="./images/1840d536f0cc6d2a5dcb5ba966b2a8cd.jpeg" alt="" />
+				<img class="invitation__photo" src="./images/39db8cdd268c8c72f24cb3f97f0ffe03.jpeg" alt="" />
+				<img class="invitation__photo" src="./images/83a646c2e38520ce87aae57f3854ce70.jpeg" alt="" />
+				<img class="invitation__photo" src="./images/2642b78d1066af1ad666544184a1b519.jpeg" alt="" />
+				<img class="invitation__photo" src="./images/2b1966ee8e9994d4051d1154196acc0e.jpeg" alt="" />
+				<img class="invitation__photo" src="./images/2dc75a8e9e53f1bb9dd451feb100dc6c.jpeg" alt="" />
+				<img class="invitation__photo" src="./images/c280cce5b798a3de3cd815dfbe6d6aca.jpeg" alt="" />
 			</div>
 			<div class="invitation__text-thumb">
 				<h2 class="title">At Your Service</h2>
-				<p>The following come as standard when travelling with Original Travel.</p>
-				<p>
+				<p class="invitation__subtitle">The following come as standard when travelling with Original Travel.</p>
+				<p class="invitation__description">
 					Curated by a dedicated&nbsp;travel design team, the company has initially launched with 12 innovative
 					experiences, and will continue to add to the collection as new journeys are created. Completely bespoke
 					itineraries are also available, upon request.
 				</p>
-				<a class="button" href="">view more</a>
+				<a class="button invitation__button" href="">view more</a>
 			</div>
 		</section>
 	</body>

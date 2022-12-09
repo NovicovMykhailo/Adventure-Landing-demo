@@ -120,10 +120,6 @@ html {
   text-align: center;
 }
 
-.section {
-  padding: 60px;
-}
-
 .button {
   color: #2a2a2a;
   text-decoration: none;
@@ -132,16 +128,33 @@ html {
   min-width: 100px;
   border: 2px solid currentColor;
   padding: 10px 24px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  -webkit-transition: color 300ms ease-in-out;
+  transition: color 300ms ease-in-out;
+}
+.button:hover, .button:focus {
+  color: #6b86a4;
 }
 
 .hero {
-  background-image: url(./images/2b1966ee8e9994d4051d1154196acc0e.jpeg);
+  background-image: url(../images/2b1966ee8e9994d4051d1154196acc0e.jpeg);
   background-repeat: no-repeat;
   height: 800px;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 75%, 50% 100%, 0 75%);
           clip-path: polygon(0% 0%, 100% 0, 100% 75%, 50% 100%, 0 75%);
 }
@@ -175,8 +188,11 @@ html {
 
 .about__thumb {
   text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-basis: 280px;
+  -ms-flex-preferred-size: 280px;
+      flex-basis: 280px;
   gap: 100px;
   padding: 0 250px;
   margin-bottom: 80px;
@@ -189,20 +205,30 @@ html {
 }
 
 .gallery {
-  background-image: url(./images/86d9c6c21bf26d2b3ed027f777d359c7.png);
+  background-image: url(../images/86d9c6c21bf26d2b3ed027f777d359c7.png);
   height: 1100px;
   padding: 0 90px;
   background-position: bottom;
 }
 
 .gallery__pictureset {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 20px;
-  transform: scale(0.9);
-  transform: translateY(40px);
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
   height: 900px;
 }
 
@@ -229,11 +255,13 @@ html {
 }
 .gallery__image:nth-child(5) {
   height: 550px;
-  transform: translateY(-250px);
+  -webkit-transform: translateY(-250px);
+          transform: translateY(-250px);
 }
 .gallery__image:nth-child(6) {
   height: 380px;
-  transform: translateY(-100px);
+  -webkit-transform: translateY(-100px);
+          transform: translateY(-100px);
 }
 
 .gallery__title {
@@ -251,13 +279,6 @@ html {
 
 .gallery__button {
   color: rgba(255, 255, 255, 0.8);
-  cursor: pointer;
-  text-transform: uppercase;
-  font-family: "Roboto", sans-serif;
-  font-size: 14px;
-  letter-spacing: 0.1em;
-  font-weight: 600;
-  transition: color 300ms ease-in-out;
 }
 .gallery__button:hover, .gallery__button:focus {
   color: #6b86a4;
@@ -266,18 +287,17 @@ html {
 .travel {
   padding-top: 0;
   padding-bottom: 0;
+  -webkit-transform: translatey(-120px);
+          transform: translatey(-120px);
+  pointer-events: none;
 }
 
-.travel__image {
-  transform: translateY(-160px);
-}
-
-.travel__map-tumb {
-  display: flex;
-  align-items: center;
-  background-image: url(./images/41695f7aabdb8eaa9fd6df8a3f7d4473.png);
-  block-size: contain;
+.travel__map-thumb {
+  background-image: url(../images/41695f7aabdb8eaa9fd6df8a3f7d4473.png);
   background-position: bottom;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .travel__thumb {
@@ -306,43 +326,91 @@ html {
   font-weight: 500;
 }
 
-.pointer {
-  color: tomato;
-  outline: 1px solid red;
-}
-
 .invitation {
-  background-image: url(./images/8489c5e2eb1c696fba409c94e0ca77d1.png);
+  background-image: url(../images/8489c5e2eb1c696fba409c94e0ca77d1.png);
   padding-top: 0;
   background-position: top;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-}
-
-.invitation__gallery {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 33.333%;
-  gap: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translateY(-120px);
+          transform: translateY(-120px);
 }
 
 .invitation__text-thumb {
   width: 50%;
   text-align: left;
   padding: 20px;
+  padding-right: 80px;
+}
+
+.invitation__gallery {
+  margin: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+  width: 1000px;
+  height: 480px;
 }
 
 .invitation__photo {
-  width: 300px;
+  display: block;
+  width: calc((100% - 80px) / 3);
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .invitation__photo:nth-child(1) {
-  height: 229px;
+  height: 220px;
 }
 .invitation__photo:nth-child(2) {
-  height: 229px;
+  height: 140px;
 }
 .invitation__photo:nth-child(3) {
-  height: 100px;
+  height: 220px;
+}
+.invitation__photo:nth-child(4) {
+  height: 220px;
+}
+.invitation__photo:nth-child(5) {
+  -webkit-transform: translateY(-80px);
+          transform: translateY(-80px);
+  height: 140px;
+}
+.invitation__photo:nth-child(6) {
+  height: 220px;
+}
+.invitation__photo:nth-child(7) {
+  -webkit-transform: translateY(-160px);
+          transform: translateY(-160px);
+  height: 140px;
+}
+
+.invitation__subtitle {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  width: 300px;
+  text-transform: uppercase;
+}
+
+.invitation__description {
+  margin-bottom: 40px;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.005em;
+  color: rgba(42, 42, 42, 0.8);
+}
+
+.invitation__button {
+  color: rgba(42, 42, 42, 0.8);
 }/*# sourceMappingURL=main.css.map */
