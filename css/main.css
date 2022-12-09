@@ -120,6 +120,12 @@ html {
   text-align: center;
 }
 
+svg:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
 .button {
   color: #2a2a2a;
   text-decoration: none;
@@ -134,10 +140,15 @@ html {
   font-size: 14px;
   letter-spacing: 0.1em;
   font-weight: 600;
-  -webkit-transition: color 300ms ease-in-out;
-  transition: color 300ms ease-in-out;
+  -webkit-transition: color 400ms ease-in-out, border-radius 500ms ease-in-out 400ms, -webkit-transform 400ms ease;
+  transition: color 400ms ease-in-out, border-radius 500ms ease-in-out 400ms, -webkit-transform 400ms ease;
+  transition: color 400ms ease-in-out, transform 400ms ease, border-radius 500ms ease-in-out 400ms;
+  transition: color 400ms ease-in-out, transform 400ms ease, border-radius 500ms ease-in-out 400ms, -webkit-transform 400ms ease;
 }
 .button:hover, .button:focus {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  border-radius: 4px;
   color: #6b86a4;
 }
 
@@ -287,8 +298,9 @@ html {
 .travel {
   padding-top: 0;
   padding-bottom: 0;
-  pointer-events: none;
   margin-top: -140px;
+  -webkit-clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
 }
 
 .travel__map-thumb {
@@ -311,6 +323,18 @@ html {
   width: 50%;
   position: relative;
 }
+.travel__map > img {
+  z-index: 10;
+  -webkit-transition: -webkit-transform 400ms ease 200ms;
+  transition: -webkit-transform 400ms ease 200ms;
+  transition: transform 400ms ease 200ms;
+  transition: transform 400ms ease 200ms, -webkit-transform 400ms ease 200ms;
+}
+.travel__map > img:hover {
+  display: block;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
 
 .travel__subtitle {
   text-transform: uppercase;
@@ -329,6 +353,11 @@ html {
   fill: #3a6aa7;
   height: 40px;
   width: auto;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  z-index: 100;
 }
 .pointer:nth-child(1) {
   position: absolute;
@@ -385,36 +414,60 @@ html {
   height: 480px;
 }
 
-.invitation__photo {
-  display: block;
-  width: calc((100% - 80px) / 3);
+.column {
+  margin-top: 20px;
+  -webkit-box-flex: 25%;
+      -ms-flex: 25%;
+          flex: 25%;
+  max-width: 25%;
+  gap: 20px;
+}
+.column > img {
+  vertical-align: middle;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: border-radius 400ms ease 50ms, -webkit-transform 400ms ease-in-out 50ms;
+  transition: border-radius 400ms ease 50ms, -webkit-transform 400ms ease-in-out 50ms;
+  transition: transform 400ms ease-in-out 50ms, border-radius 400ms ease 50ms;
+  transition: transform 400ms ease-in-out 50ms, border-radius 400ms ease 50ms, -webkit-transform 400ms ease-in-out 50ms;
 }
-.invitation__photo:nth-child(1) {
+.column > img:not(:last-child) {
+  margin-bottom: 20px;
+}
+.column > img:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+  border-radius: 8px;
+  z-index: 200;
+}
+
+.item-1 {
   height: 220px;
 }
-.invitation__photo:nth-child(2) {
+
+.item-2 {
+  height: 220px;
+}
+
+.item-3 {
   height: 140px;
 }
-.invitation__photo:nth-child(3) {
-  height: 220px;
-}
-.invitation__photo:nth-child(4) {
-  height: 220px;
-}
-.invitation__photo:nth-child(5) {
-  -webkit-transform: translateY(-80px);
-          transform: translateY(-80px);
+
+.item-4 {
   height: 140px;
 }
-.invitation__photo:nth-child(6) {
+
+.item-5 {
+  height: 140px;
+}
+
+.item-6 {
   height: 220px;
 }
-.invitation__photo:nth-child(7) {
-  -webkit-transform: translateY(-160px);
-          transform: translateY(-160px);
-  height: 140px;
+
+.item-7 {
+  height: 220px;
 }
 
 .invitation__subtitle {

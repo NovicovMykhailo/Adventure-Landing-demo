@@ -30,3 +30,8 @@ html {
 // 	border-radius: 8px;
 // 	z-index: 200;
 // }
+svg:hover {
+	cursor: pointer;
+	transform: scale(1.2);
+
+}

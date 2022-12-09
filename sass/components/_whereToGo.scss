@@ -1,13 +1,12 @@
 .travel {
 	padding-top: 0;
 	padding-bottom: 0;
-	pointer-events: none;
     margin-top: -140px;
+	clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
 }
 
 .travel__map-thumb {
 	background-image: url(../images/41695f7aabdb8eaa9fd6df8a3f7d4473.png);
-
 	background-position: bottom;
 	display: flex;
 }
@@ -22,6 +21,17 @@
 .travel__map {
 	width: 50%;
 	position: relative;
+	
+	&>img{
+		z-index: 10;
+		transition: transform 400ms ease 200ms;
+
+	}
+	&>img:hover{
+		display: block;
+		transform: scale(1.02);
+	}
+
 }
 
 .travel__subtitle {
@@ -39,6 +49,8 @@
 	fill: #3a6aa7;
     height: 40px;
     width: auto;
+	transition: transform 250ms ease-in-out;
+	z-index: 100;
 
 	&:nth-child(1) {
 		position: absolute;
