@@ -170,6 +170,22 @@ svg:hover {
           clip-path: polygon(0% 0%, 100% 0, 100% 75%, 50% 100%, 0 75%);
 }
 
+.animation-first {
+  position: relative;
+  -webkit-animation: animatetop 1200ms;
+          animation: animatetop 1200ms;
+}
+
+.animation-second {
+  position: relative;
+  -webkit-animation: animatebottom 900ms;
+          animation: animatebottom 900ms;
+  -webkit-animation-delay: 900ms;
+          animation-delay: 900ms;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}
+
 .hero__subtitle {
   width: 534px;
   font-weight: 500;
@@ -177,8 +193,76 @@ svg:hover {
   margin: 0 auto;
   letter-spacing: 0.25rem;
   color: rgba(255, 255, 255, 0.8);
+  position: relative;
+  -webkit-animation: animateleft 900ms;
+          animation: animateleft 900ms;
+  -webkit-animation-delay: 1500ms;
+          animation-delay: 1500ms;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
 }
 
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes animateleft {
+  from {
+    left: -300px;
+    opacity: 0;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+@keyframes animateleft {
+  from {
+    left: -300px;
+    opacity: 0;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes animatebottom {
+  from {
+    bottom: -300px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+@keyframes animatebottom {
+  from {
+    bottom: -300px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
 .about {
   text-align: center;
 }
