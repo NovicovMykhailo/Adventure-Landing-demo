@@ -40,7 +40,6 @@
 	}
     
 	& > img:hover {
-		// cursor: pointer;
 		transform: scale(1.15);
 		border-radius: 8px;
 		z-index: 200;
@@ -85,5 +84,10 @@
 	color: rgba(42, 42, 42, 0.8);
 }
 .invitation__button {
-	color: rgba(42, 42, 42, 0.8);
+	color: $bg-color;
+	
+	&:hover{
+		color: rgba(42, 42, 42, 0.8);
+	}
 }
+

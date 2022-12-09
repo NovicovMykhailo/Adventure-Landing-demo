@@ -26,4 +26,8 @@
     display: block;
     width: calc(100% / 5);
     margin: 0 auto;
+    transition: transform 400ms ease-in-out 50ms;
+    &:hover{
+        transform: scale(1.15);
+    }
 }
