@@ -202,6 +202,19 @@ svg:hover {
           animation-fill-mode: backwards;
 }
 
+.hero__icon-wrapper {
+  display: block;
+  fill: rgba(128, 128, 128, 0.5);
+  position: relative;
+  -webkit-animation: animatetop_arrow 1200ms;
+          animation: animatetop_arrow 1200ms;
+  -webkit-animation-delay: 1700ms;
+          animation-delay: 1700ms;
+  top: 220px;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}
+
 @-webkit-keyframes animatetop {
   from {
     top: -300px;
@@ -260,6 +273,26 @@ svg:hover {
   }
   to {
     bottom: 0;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes animatetop_arrow {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 220px;
+    opacity: 1;
+  }
+}
+@keyframes animatetop_arrow {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 220px;
     opacity: 1;
   }
 }

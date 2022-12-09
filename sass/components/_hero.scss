@@ -31,9 +31,21 @@
     animation: animateleft 900ms;
     animation-delay: 1500ms;
     animation-fill-mode: backwards;
+	
+}
 
+
+.hero__icon-wrapper{
+	display: block;
+	fill: rgba(128, 128, 128, 0.5);
+	position: relative;
+	animation: animatetop_arrow 1200ms;
+	animation-delay: 1700ms;
+	top: 220px;
+	animation-fill-mode: backwards;
 
 }
+
 
 @keyframes animatetop {
 	from {
@@ -62,6 +74,17 @@
 	}
 	to {
 		bottom: 0;
+		opacity: 1;
+	}
+}
+@keyframes animatetop_arrow {
+	from {
+		top: -300px;
+		opacity: 0;
+	}
+
+	to {
+		top: 220px;
 		opacity: 1;
 	}
 }
