@@ -1,12 +1,13 @@
 .travel {
 	padding-top: 0;
 	padding-bottom: 0;
-	transform: translatey(-120px);
 	pointer-events: none;
+    margin-top: -140px;
 }
 
 .travel__map-thumb {
 	background-image: url(../images/41695f7aabdb8eaa9fd6df8a3f7d4473.png);
+
 	background-position: bottom;
 	display: flex;
 }
@@ -36,7 +37,6 @@
 }
 .pointer {
 	fill: #3a6aa7;
-	outline: 1px solid red;
     height: 40px;
     width: auto;
 
