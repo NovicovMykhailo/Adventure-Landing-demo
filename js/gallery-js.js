@@ -32,19 +32,38 @@ const refs = {
 };
 
 
-refs.alaska.addEventListener("click", onClick(hotels[0]));
-// refs.rio.addEventListener("click", onClick(hotels[1]));
-// refs.turkey.addEventListener("click", onClick(hotels[2]));
-// refs.indonesia.addEventListener("click", onClick(hotels[3]));
+refs.alaska.addEventListener("click", onAlaskaClick);
+refs.rio.addEventListener("click", onRioClick);
+refs.turkey.addEventListener("click", onTurkeyClick);
+refs.indonesia.addEventListener("click", onIndoClick);
 
-function onClick(hotel) {
-    makeModal(hotel),
-	Fancybox.show([{ src: `#${hotel.id}`, type: "inline" }]);
+function onAlaskaClick(event) {
+    makeModal(hotels[0]),
+    console.log('click')
+	Fancybox.show([{ src: `#${hotels[0].id}`, type: "inline" }]);
+}
+
+function onRioClick(event) {
+    makeModal(hotels[1]),
+    console.log('click')
+	Fancybox.show([{ src: `#${hotels[1].id}`, type: "inline" }]);
+}
+
+function onTurkeyClick(event) {
+    makeModal(hotels[2]),
+    console.log('click')
+	Fancybox.show([{ src: `#${hotels[2].id}`, type: "inline" }]);
+}
+
+function onIndoClick(event) {
+    makeModal(hotels[3]),
+    console.log('click')
+	Fancybox.show([{ src: `#${hotels[3].id}`, type: "inline" }]);
 }
 
 
 function makeModal(array) {
-	const { location, photo, address, description, hotelName, link, id } = array;
+	const { location, photo, address, description, hotelName, link, id, addressUrl } = array;
 	refs.body.insertAdjacentHTML(
 		"afterend",
 		`<div id=${id} class="modal" style="display:none; min-width:800px; min-height:433px">
@@ -61,7 +80,7 @@ function makeModal(array) {
 						class=""
 						alt="hotel wiew"
 						src=${photo}
-						width="350"
+						
 					/>
 				</a>
 				<div class="modal__descr">
@@ -69,7 +88,7 @@ function makeModal(array) {
 					<p>${description}</p>
 				</div>
 			</div>
-			<a class="address" href="#">
+			<a class="address" href=${addressUrl} target="_blank">
 				<svg class="pointer--modal" width="32" height="32">
 					<use href="./images/symbol-defs.svg#pointer"></use>
 				</svg>
@@ -79,3 +98,10 @@ function makeModal(array) {
 `,
 	);
 }
+
+
+/**inline style if images
+ *  height: 520px; - from 2nd text div
+    object-fit: cover;
+    object-position: 40%;
+ */
