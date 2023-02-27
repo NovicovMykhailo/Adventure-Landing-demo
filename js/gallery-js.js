@@ -1,13 +1,8 @@
 import { hotels } from "./hotels.js";
 
-
 const options = {
 	contentClick: "iterateZoom",
-	// isClosing:() => {
-	// 	const modal = document.querySelector(".modal");
-	// 	modal.innerHTML = ""
-	// 	console.log('closing') },
-		
+
 	Images: {
 		Panzoom: {
 			maxScale: 1,
@@ -23,7 +18,16 @@ const options = {
 	Thumbs: {
 		type: "none",
 	},
+};
 
+const modOptions = {
+	on: {
+		destroy: () => {
+			console.log(document.querySelectorAll(".modal"))
+		},
+	  },
+
+	
 };
 
 Fancybox.bind('[data-fancybox="gallery"]', options);
@@ -42,34 +46,30 @@ refs.rio.addEventListener("click", onRioClick);
 refs.turkey.addEventListener("click", onTurkeyClick);
 refs.indonesia.addEventListener("click", onIndoClick);
 
-
- 
 function onAlaskaClick(event) {
-
-	makeModal(hotels[0]), Fancybox.show([{ src: `#${hotels[0].id}`, type: "inline" }])
+	makeModal(hotels[0]), Fancybox.show([{ src: `#${hotels[0].id}`,type: "inline"}], modOptions );
+	
 }
 
 function onRioClick(event) {
-
-	makeModal(hotels[1]), Fancybox.show([{ src: `#${hotels[1].id}`, type: "inline" }]);
+	makeModal(hotels[1]), Fancybox.show([{ src: `#${hotels[1].id}`, modOptions }]);
 }
 
 function onTurkeyClick(event) {
-
-	makeModal(hotels[2]), Fancybox.show([{ src: `#${hotels[2].id}`, type: "inline" }]);
+	makeModal(hotels[2]), Fancybox.show([{ src: `#${hotels[2].id}`, modOptions }]);
 }
 
 function onIndoClick(event) {
-	// const modal = document.querySelector(".modal");
+	
 	// modal.innerHTML = "";
-	makeModal(hotels[3]), Fancybox.show([{ src: `#${hotels[3].id}`, type: "inline" }]);
+	makeModal(hotels[3]), Fancybox.show([{ src: `#${hotels[3].id}`, modOptions }]);
 }
 
 function makeModal(array) {
 	const { location, photo, address, description, hotelName, link, id, addressUrl } = array;
 	refs.body.insertAdjacentHTML(
 		"afterend",
-		`<div id=${id} class="modal" style="display:none; min-width:800px; min-height:433px">
+		`<div id=${id} data-fancybox="modal" class="modal" style="display:none; min-width:800px; min-height:433px">
 			<h2 class="modal__title">Welcome to '${hotelName}'</h2>
 			<p class="location">
 				<svg class="location-svg" width="32" height="32">
@@ -100,4 +100,8 @@ function makeModal(array) {
 		</div>
 `,
 	);
+}
+
+function callback (){
+
 }
