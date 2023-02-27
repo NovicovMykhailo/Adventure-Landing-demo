@@ -47,29 +47,33 @@
 }
 .pointer {
 	fill: #3a6aa7;
-    height: 40px;
-    width: auto;
 	transition: transform 250ms ease-in-out;
 	z-index: 100;
+
+	border-radius: 50%;
+
+    width: 80px;
+    height: 80px;
+    padding: 20px;
 
 	&:nth-child(1) {
 		position: absolute;
 		top: 25px;
-		left: 52px;
+		left: 10px;
 	}
 	&:nth-child(2) {
 		position: absolute;
-		top: 180px;
-		left: 197px;
+		top: 160px;
+		left: 177px;
 	}
 	&:nth-child(3) {
 		position: absolute;
-        top: 76px;
-        left: 308px;
+        top: 60px;
+        left: 290px;
 	}
     &:nth-child(4) {
 		position: absolute;
-        top: 179px;
-        left: 419px;
+        top: 159px;
+        left: 430px;
 	}
 }

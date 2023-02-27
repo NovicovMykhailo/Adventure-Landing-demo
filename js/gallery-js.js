@@ -100,8 +100,3 @@ function makeModal(array) {
 }
 
 
-/**inline style if images
- *  height: 520px; - from 2nd text div
-    object-fit: cover;
-    object-position: 40%;
- */
