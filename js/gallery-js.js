@@ -22,12 +22,10 @@ const options = {
 
 const modOptions = {
 	on: {
-		destroy: () => {
-			console.log(document.querySelectorAll(".modal"))
+		close: () => {
+			document.querySelector('[data-fancybox="modal"]').innerHTML = "";
 		},
-	  },
-
-	
+	},
 };
 
 Fancybox.bind('[data-fancybox="gallery"]', options);
@@ -47,22 +45,20 @@ refs.turkey.addEventListener("click", onTurkeyClick);
 refs.indonesia.addEventListener("click", onIndoClick);
 
 function onAlaskaClick(event) {
-	makeModal(hotels[0]), Fancybox.show([{ src: `#${hotels[0].id}`,type: "inline"}], modOptions );
-	
+	makeModal(hotels[0]), Fancybox.show([{ src: `#${hotels[0].id}`, type: "inline" }], modOptions);
 }
 
 function onRioClick(event) {
-	makeModal(hotels[1]), Fancybox.show([{ src: `#${hotels[1].id}`, modOptions }]);
+	makeModal(hotels[1]), Fancybox.show([{ src: `#${hotels[1].id}`, type: "inline" }], modOptions);
 }
 
 function onTurkeyClick(event) {
-	makeModal(hotels[2]), Fancybox.show([{ src: `#${hotels[2].id}`, modOptions }]);
+	makeModal(hotels[2]), Fancybox.show([{ src: `#${hotels[2].id}`, type: "inline" }], modOptions);
 }
 
 function onIndoClick(event) {
-	
 	// modal.innerHTML = "";
-	makeModal(hotels[3]), Fancybox.show([{ src: `#${hotels[3].id}`, modOptions }]);
+	makeModal(hotels[3]), Fancybox.show([{ src: `#${hotels[3].id}`, type: "inline" }], modOptions);
 }
 
 function makeModal(array) {
@@ -100,8 +96,4 @@ function makeModal(array) {
 		</div>
 `,
 	);
-}
-
-function callback (){
-
 }
