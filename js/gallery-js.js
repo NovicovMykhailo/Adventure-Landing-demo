@@ -1,7 +1,13 @@
 import { hotels } from "./hotels.js";
 
+
 const options = {
 	contentClick: "iterateZoom",
+	// isClosing:() => {
+	// 	const modal = document.querySelector(".modal");
+	// 	modal.innerHTML = ""
+	// 	console.log('closing') },
+		
 	Images: {
 		Panzoom: {
 			maxScale: 1,
@@ -17,6 +23,7 @@ const options = {
 	Thumbs: {
 		type: "none",
 	},
+
 };
 
 Fancybox.bind('[data-fancybox="gallery"]', options);
@@ -26,41 +33,37 @@ const refs = {
 	body: document.querySelector("[data-last-element]"),
 	alaska: document.querySelector('[data="alaska"]'),
 	rio: document.querySelector('[data="rio"]'),
-    turkey: document.querySelector('[data="turkey"]'),
-    indonesia: document.querySelector('[data="indonesia"]')
-    
+	turkey: document.querySelector('[data="turkey"]'),
+	indonesia: document.querySelector('[data="indonesia"]'),
 };
-
 
 refs.alaska.addEventListener("click", onAlaskaClick);
 refs.rio.addEventListener("click", onRioClick);
 refs.turkey.addEventListener("click", onTurkeyClick);
 refs.indonesia.addEventListener("click", onIndoClick);
 
+
+ 
 function onAlaskaClick(event) {
-    makeModal(hotels[0]),
-    console.log('click')
-	Fancybox.show([{ src: `#${hotels[0].id}`, type: "inline" }]);
+
+	makeModal(hotels[0]), Fancybox.show([{ src: `#${hotels[0].id}`, type: "inline" }])
 }
 
 function onRioClick(event) {
-    makeModal(hotels[1]),
-    console.log('click')
-	Fancybox.show([{ src: `#${hotels[1].id}`, type: "inline" }]);
+
+	makeModal(hotels[1]), Fancybox.show([{ src: `#${hotels[1].id}`, type: "inline" }]);
 }
 
 function onTurkeyClick(event) {
-    makeModal(hotels[2]),
-    console.log('click')
-	Fancybox.show([{ src: `#${hotels[2].id}`, type: "inline" }]);
+
+	makeModal(hotels[2]), Fancybox.show([{ src: `#${hotels[2].id}`, type: "inline" }]);
 }
 
 function onIndoClick(event) {
-    makeModal(hotels[3]),
-    console.log('click')
-	Fancybox.show([{ src: `#${hotels[3].id}`, type: "inline" }]);
+	// const modal = document.querySelector(".modal");
+	// modal.innerHTML = "";
+	makeModal(hotels[3]), Fancybox.show([{ src: `#${hotels[3].id}`, type: "inline" }]);
 }
-
 
 function makeModal(array) {
 	const { location, photo, address, description, hotelName, link, id, addressUrl } = array;
@@ -98,5 +101,3 @@ function makeModal(array) {
 `,
 	);
 }
-
-
