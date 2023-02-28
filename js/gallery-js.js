@@ -28,20 +28,27 @@ const modOptions = {
 	},
 };
 
+const formOptions = {
+	on: {
+		close: () => {
+			setTimeout(deleteForm, 1000);
+		},
+	},
+};
 Fancybox.bind('[data-fancybox="gallery"]', options);
 Fancybox.bind('[data-fancybox ="invitation"]', options);
 
 const refs = {
 	body: document.querySelector("[data-last-element]"),
 	pointers: document.querySelectorAll(".pointer"),
+	loginButton: document.querySelector(".nav---btn"),
 };
 
 refs.pointers.forEach((event, key, array) => {
 	event.addEventListener("click", () => {
-		makeModal(hotels[key]), Fancybox.show([{ src: `#${hotels[key].id}`, type: "inline" }], modOptions);;
+		makeModal(hotels[key]), Fancybox.show([{ src: `#${hotels[key].id}`, type: "inline" }], modOptions);
 	});
 });
-
 
 function makeModal(array) {
 	const { location, photo, address, description, hotelName, link, id, addressUrl } = array;
@@ -83,4 +90,51 @@ function makeModal(array) {
 function deleteMarkup() {
 	const el = document.querySelector(".modal");
 	el.parentElement.removeChild(el);
+}
+
+function deleteForm() {
+	const el = document.querySelector(".form");
+	el.parentElement.removeChild(el);
+}
+
+refs.loginButton.addEventListener("click", () => {
+	makeForm(), Fancybox.show([{ src: "#form", type: "inline" }]);
+	setTimeout(validationForm, 500)
+});
+
+function makeForm() {
+	refs.body.insertAdjacentHTML(
+		"afterend",
+		`		
+	<form class="form" id="form">
+			<img src="./images/e7f30519174d8fa83955e6fcde111ddd.png" alt="logo" width="300">
+			<div class="form-thumb">
+			<label>
+				<span class="labels">Login</span>
+				<input class="form-field login" type="login" placeholder=" "/>
+			</label>
+			<label>
+				<span class="labels ">Password</span>
+				<input class="form-field password" type="password" name="password"placeholder=" "/>
+			</label>
+			<label class="checkbox">
+				<span class="chk-lbl">do you agree with <a href="" style="
+				text-underline-offset: 4px;
+				color: inherit;
+				margin-left: 6px;
+			">License</a></span>
+				<input class="chkbx" type="checkbox" name="agree" />
+			</label>
+			<button class="button form-button" type="submit" disabled >login</button>
+		</div>
+	</form>`,
+	);
+}
+
+function validationForm(){
+	const login = document.querySelector('.login');
+	const password = document.querySelector('.password');
+	const chkBox = document.querySelector('.chkbx');
+	const submitBrtn = document.querySelector('.form-button');
+	// console.dir(new FormData)
 }
