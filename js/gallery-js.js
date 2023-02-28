@@ -137,4 +137,5 @@ function validationForm(){
 	const chkBox = document.querySelector('.chkbx');
 	const submitBrtn = document.querySelector('.form-button');
 	// console.dir(new FormData)
+	console.log(login)
 }
