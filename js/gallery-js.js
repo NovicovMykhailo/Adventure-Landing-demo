@@ -47,10 +47,8 @@ const refs = {
 refs.pointers.forEach((event, key, array) => {
 	event.addEventListener("click", () => {
 		makeModal(hotels[key]), Fancybox.show([{ src: `#${hotels[key].id}`, type: "inline" }], modOptions);
-		
 	});
 });
-
 
 function makeModal(array) {
 	const { location, photo, address, description, hotelName, link, id, addressUrl } = array;
@@ -95,13 +93,13 @@ function deleteMarkup() {
 }
 
 function deleteForm() {
-	const el = document.querySelector(".form");
+	const el = document.querySelector("#form");
 	el.parentElement.removeChild(el);
 }
 
 refs.loginButton.addEventListener("click", () => {
-	makeForm(), Fancybox.show([{ src: "#form", type: "inline" }]);
-	setTimeout(validationForm, 500)
+	makeForm(), Fancybox.show([{ src: "#form", type: "inline" }], formOptions);
+	setTimeout(validationForm, 500);
 });
 
 function makeForm() {
@@ -133,10 +131,15 @@ function makeForm() {
 	);
 }
 
-function validationForm(){
-	const login = document.querySelector('.login');
-	const password = document.querySelector('.password');
-	const chkBox = document.querySelector('.chkbx');
-	const submitBrtn = document.querySelector('.form-button');
-	// console.dir(new FormData)
+function validationForm() {
+	const form = document.querySelector("#form");
+	const chkBox = document.querySelector(".chkbx");
+	const submitBrtn = document.querySelector(".form-button");
+
+	form.addEventListener("input", event => {
+		if (event.target.value !== "" && chkBox.checked === true) {
+			submitBrtn.disabled = ''
+			submitBrtn.enabled 
+		}
+	});
 }
