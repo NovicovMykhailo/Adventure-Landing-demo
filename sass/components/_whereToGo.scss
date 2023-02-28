@@ -7,10 +7,14 @@
 
 .travel__map-thumb {
 	background-image: url(../images/41695f7aabdb8eaa9fd6df8a3f7d4473.png);
+	background-size: cover;
+	background-repeat: no-repeat;
 	background-position: bottom;
 	display: flex;
 }
-
+.travel__image{
+	width: 100%;
+}
 .travel__thumb {
 	padding-left: 60px;
 	padding-right: 43px;

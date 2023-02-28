@@ -1,12 +1,15 @@
 .gallery {
 	background-image: url(../images/86d9c6c21bf26d2b3ed027f777d359c7.png);
 	height: 1100px;
+	background-size: cover;
+	background-repeat: no-repeat;
 	padding: 0 90px;
 	background-position: bottom;
 }
 .gallery__pictureset {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
 	gap: 20px;
     transform: scale(0.9);
 	& img {

@@ -385,6 +385,7 @@ html {
 
 .hero {
   background-image: url(../images/2b1966ee8e9994d4051d1154196acc0e.jpeg);
+  background-size: cover;
   background-repeat: no-repeat;
   height: 800px;
   text-align: center;
@@ -510,6 +511,8 @@ html {
 .gallery {
   background-image: url(../images/86d9c6c21bf26d2b3ed027f777d359c7.png);
   height: 1100px;
+  background-size: cover;
+  background-repeat: no-repeat;
   padding: 0 90px;
   background-position: bottom;
 }
@@ -520,6 +523,9 @@ html {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 20px;
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
@@ -610,10 +616,16 @@ html {
 
 .travel__map-thumb {
   background-image: url(../images/41695f7aabdb8eaa9fd6df8a3f7d4473.png);
+  background-size: cover;
+  background-repeat: no-repeat;
   background-position: bottom;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.travel__image {
+  width: 100%;
 }
 
 .travel__thumb {
@@ -689,7 +701,9 @@ html {
 
 .invitation {
   background-image: url(../images/8489c5e2eb1c696fba409c94e0ca77d1.png);
-  padding-top: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 40px 43px 40px 43px;
   background-position: top;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -697,36 +711,31 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 50px;
 }
 
 .invitation__text-thumb {
   width: 50%;
   text-align: left;
   padding: 20px;
-  padding-right: 80px;
 }
 
 .invitation__gallery {
-  margin: 20px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   gap: 20px;
-  width: 1000px;
-  height: 480px;
 }
 
 .column {
-  margin-top: 20px;
   -webkit-box-flex: 25%;
       -ms-flex: 25%;
           flex: 25%;
-  max-width: 25%;
   gap: 20px;
 }
 
@@ -805,4 +814,43 @@ html {
 }
 .invitation__button:hover {
   color: rgba(42, 42, 42, 0.8);
+}
+
+footer {
+  height: 60px;
+  background-color: #333333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+footer > p {
+  text-align: center;
+  display: inline-block;
+  color: #fff;
+  text-transform: capitalize;
+}
+footer > p::after {
+  content: "";
+  display: block;
+  width: 100px;
+  border-bottom: 1px solid rgb(133, 133, 133);
+  position: absolute;
+  top: 50%;
+  right: 30%;
+}
+footer > p::before {
+  content: "";
+  display: block;
+  width: 100px;
+  border-bottom: 1px solid rgb(133, 133, 133);
+  position: absolute;
+  top: 50%;
+  left: 30%;
 }/*# sourceMappingURL=main.css.map */

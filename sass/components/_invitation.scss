@@ -1,49 +1,43 @@
 .invitation {
 	background-image: url(../images/8489c5e2eb1c696fba409c94e0ca77d1.png);
-	padding-top: 0;
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding: 40px 43px 40px 43px;
 	background-position: top;
 	display: flex;
 	align-items: center;
+	gap: 50px;
 }
 
 .invitation__text-thumb {
 	width: 50%;
 	text-align: left;
 	padding: 20px;
-	padding-right: 80px;
 }
 
 .invitation__gallery {
-	margin: 20px 0;
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
+	justify-content: flex-start;
 	gap: 20px;
-	width: 1000px;
-	height: 480px;
 }
 .column {
-	margin-top: 20px;
 	flex: 25%;
-	max-width: 25%;
 	gap: 20px;
+}
 
+.invitation__photo > img {
+	vertical-align: middle;
+	width: 100%;
+	object-fit: cover;
+	transition: transform 400ms ease-in-out 50ms, border-radius 400ms ease 50ms;
 
-
-} 	
-.invitation__photo > img{
-		vertical-align: middle;
-		width: 100%;
-		object-fit: cover;
-		transition: transform 400ms ease-in-out 50ms, border-radius 400ms ease 50ms;
-
-		&:hover {
-			transform: scale(1.15);
-			border-radius: 8px;
-			z-index: 200;
-		}
+	&:hover {
+		transform: scale(1.15);
+		border-radius: 8px;
+		z-index: 200;
 	}
-
+}
 
 .item-1 {
 	height: 220px;
