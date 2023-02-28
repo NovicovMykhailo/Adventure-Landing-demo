@@ -46,8 +46,8 @@ const refs = {
 
 refs.pointers.forEach((event, key, array) => {
 	event.addEventListener("click", () => {
-		makeModal(hotels[key]), Fancybox.show([{ src: `#${hotels[key].id}`, type: "inline" }], modOptions);;
 		makeModal(hotels[key]), Fancybox.show([{ src: `#${hotels[key].id}`, type: "inline" }], modOptions);
+		
 	});
 });
 

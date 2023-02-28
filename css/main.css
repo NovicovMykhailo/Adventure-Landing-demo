@@ -825,6 +825,9 @@ nav {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  -webkit-box-flex: 20%;
+      -ms-flex-positive: 20%;
+          flex-grow: 20%;
   gap: 20px;
 }
 
