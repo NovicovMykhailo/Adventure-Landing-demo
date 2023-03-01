@@ -139,7 +139,9 @@ function validationForm() {
 	form.addEventListener("input", event => {
 		if (event.target.value !== "" && chkBox.checked === true) {
 			submitBrtn.disabled = ''
-			submitBrtn.enabled 
+			submitBrtn.enabled ;
 		}
+		submitBrtn.enabled = "";
+		submitBrtn.disabled
 	});
 }
