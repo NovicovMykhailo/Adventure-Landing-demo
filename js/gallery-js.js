@@ -125,7 +125,7 @@ function makeForm() {
 			">License</a></span>
 				<input class="chkbx" type="checkbox" name="agree" />
 			</label>
-			<button class="button form-button" type="submit" disabled >login</button>
+			<button class="button form-button" type="submit"  disabled>login</button>
 		</div>
 	</form>`,
 	);
@@ -137,11 +137,13 @@ function validationForm() {
 	const submitBrtn = document.querySelector(".form-button");
 
 	form.addEventListener("input", event => {
-		if (event.target.value !== "" && chkBox.checked === true) {
-			submitBrtn.disabled = ''
-			submitBrtn.enabled ;
+		if (event.target.value !== "" && chkBox.checked == true) {
+			submitBrtn.disabled = ""
+			submitBrtn.enabled;
+		} else if (event.target.value !== "" && chkBox.checked == false){
+			submitBrtn.enabled = ""
+			submitBrtn.disabled;
 		}
-		submitBrtn.enabled = "";
-		submitBrtn.disabled
+		
 	});
 }
