@@ -1068,4 +1068,16 @@ footer > p::before {
 .form-button:enabled:hover {
   border-color: rgb(61, 147, 126);
   color: rgb(61, 147, 126);
+}
+
+.fancybox__backdrop {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.fancybox__content {
+  background-color: transparent !important;
+}
+
+.fancybox__content > .fancybox__iframe > .f-button.is-close-btn {
+  top: -7px !important;
 }/*# sourceMappingURL=main.css.map */

@@ -9,9 +9,9 @@
 	outline: 10px solid, rgb(114, 137, 151);
 	padding: 60px 30px;
 	display: flex;
-    &>img{
-        margin-bottom: 40px;
-    }
+	& > img {
+		margin-bottom: 40px;
+	}
 }
 
 .form-thumb {
@@ -26,22 +26,21 @@
 	display: inline-block;
 	font-size: 18px;
 	font-weight: 600;
-    width: 77px;
+	width: 77px;
 	margin-bottom: 20px;
 	position: relative;
 	top: 56px;
 	left: 225px;
 	color: black;
-    text-align: end;
-	
+	text-align: end;
 }
 
 .form-field {
 	display: inline-block;
-    color: rgb(227, 225, 225);
-    font-size: larger;
-    font-weight: 600;
-    letter-spacing: 0.12rem;
+	color: rgb(227, 225, 225);
+	font-size: larger;
+	font-weight: 600;
+	letter-spacing: 0.12rem;
 	padding: 15px 25px;
 	border-radius: 8px;
 	width: 100%;
@@ -49,7 +48,7 @@
 	border: none;
 	background: linear-gradient(90deg, rgba(255, 255, 255, 0.2) 60%, rgba(164, 164, 164, 0.9) 100%);
 	box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-    &:hover {
+	&:hover {
 		.labels {
 			transform: trancelateX(20px);
 		}
@@ -69,7 +68,7 @@
 	color: rgb(224, 223, 223);
 	font-size: 18px;
 	font-weight: 600;
-    margin-bottom: 25px;
+	margin-bottom: 25px;
 }
 .chkbx {
 	position: absolute;
@@ -83,18 +82,26 @@
 	align-self: center;
 	background-color: transparent;
 
-
 	&:disabled {
 		border-color: rgb(78, 78, 78);
 		color: rgb(83, 82, 82);
 	}
-    &:enabled {
-        border-color: rgb(114, 137, 151);
-        color: rgb(114, 137, 151);
-        &:hover {
-            border-color: rgb(61, 147, 126);
-            color: rgb(61, 147, 126);
-        }
+	&:enabled {
+		border-color: rgb(114, 137, 151);
+		color: rgb(114, 137, 151);
+		&:hover {
+			border-color: rgb(61, 147, 126);
+			color: rgb(61, 147, 126);
+		}
+	}
+}
+.fancybox__backdrop {
+	background-color: rgba(0, 0, 0, 0.5) !important;
+}
+.fancybox__content {
+	background-color: transparent !important;
+}
+.fancybox__content > .fancybox__iframe >.f-button.is-close-btn{
 
-    }
+	top: -7px !important;
 }

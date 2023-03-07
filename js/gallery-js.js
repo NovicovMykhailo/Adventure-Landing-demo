@@ -119,7 +119,7 @@ function makeForm() {
 				<input class="form-field password" type="password" name="password"placeholder=" "/>
 			</label>
 			<label class="checkbox">
-				<span class="chk-lbl">do you agree with <a href="" style="
+				<span class="chk-lbl">do you agree with <a href="" data-fancybox data-src="#my-site" style="
 				text-underline-offset: 4px;
 				color: inherit;
 				margin-left: 6px;
@@ -139,23 +139,37 @@ function validationForm() {
 
 	form.addEventListener("input", debounce(onInput, 500));
 
-	function onInput(){
-		if(chkBox.checked === true && form[0].value !== '' && form[1].value !== ''){
-			submitBrtn.disabled = ''
+	function onInput() {
+		if (chkBox.checked === true && form[0].value !== "" && form[1].value !== "") {
+			submitBrtn.disabled = "";
 			submitBrtn.enebled;
-		}else{
-			submitBrtn.disabled = 'disabled';
-			submitBrtn.enebled = '';
+		} else {
+			submitBrtn.disabled = "disabled";
+			submitBrtn.enebled = "";
 		}
-	localStorage.setItem('loginData', JSON.stringify(`{ UserName: ${form[0].value}, Password: ${form[1].value}, Agreenment: ${chkBox.checked}}`))
-		
+		localStorage.setItem(
+			"loginData",
+			JSON.stringify(`{ UserName: ${form[0].value}, Password: ${form[1].value}, Agreenment: ${chkBox.checked}}`),
+		);
 	}
-	form.addEventListener("submit", (e)=>{
-		console.log(JSON.parse(localStorage.getItem('loginData')))
-		localStorage.removeItem('loginData')
-		e.preventDefault()
-		document.querySelector('.is-close-btn').click()
+	form.addEventListener("submit", e => {
+		console.log(JSON.parse(localStorage.getItem("loginData")));
+		localStorage.removeItem("loginData");
+		e.preventDefault();
+		document.querySelector(".is-close-btn").click();
+	});
 
-
-	})
+	document.querySelector('[data-src="#my-site"]').addEventListener("click", e => {
+		e.preventDefault();
+		Fancybox.show([
+			{
+				src: "https://novicovmykhailo.github.io/GoIT_Maraphone/",
+				width: 600,
+				height: 677,
+				type: "iframe",
+			},
+		]);
+	});
 }
+
+
