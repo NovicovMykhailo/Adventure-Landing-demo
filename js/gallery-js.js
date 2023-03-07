@@ -35,6 +35,7 @@ const formOptions = {
 		},
 	},
 };
+
 Fancybox.bind('[data-fancybox="gallery"]', options);
 Fancybox.bind('[data-fancybox ="invitation"]', options);
 
@@ -125,7 +126,7 @@ function makeForm() {
 			">License</a></span>
 				<input class="chkbx" type="checkbox" name="agree" />
 			</label>
-			<button class="button form-button" type="submit"  disabled>login</button>
+			<button class="button form-button" type="submit" disabled>login</button>
 		</div>
 	</form>`,
 	);
@@ -136,14 +137,25 @@ function validationForm() {
 	const chkBox = document.querySelector(".chkbx");
 	const submitBrtn = document.querySelector(".form-button");
 
-	form.addEventListener("input", event => {
-		if (event.target.value !== "" && chkBox.checked == true) {
-			submitBrtn.disabled = ""
-			submitBrtn.enabled;
-		} else if (event.target.value !== "" && chkBox.checked == false){
-			submitBrtn.enabled = ""
-			submitBrtn.disabled;
+	form.addEventListener("input", debounce(onInput, 500));
+
+	function onInput(){
+		if(chkBox.checked === true && form[0].value !== '' && form[1].value !== ''){
+			submitBrtn.disabled = ''
+			submitBrtn.enebled;
+		}else{
+			submitBrtn.disabled = 'disabled';
+			submitBrtn.enebled = '';
 		}
+	localStorage.setItem('loginData', JSON.stringify(`{ UserName: ${form[0].value}, Password: ${form[1].value}, Agreenment: ${chkBox.checked}}`))
 		
-	});
+	}
+	form.addEventListener("submit", (e)=>{
+		console.log(JSON.parse(localStorage.getItem('loginData')))
+		localStorage.removeItem('loginData')
+		e.preventDefault()
+		document.querySelector('.is-close-btn').click()
+
+
+	})
 }

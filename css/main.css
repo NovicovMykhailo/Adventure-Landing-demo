@@ -332,6 +332,10 @@ html {
   scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 .body {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
