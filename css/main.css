@@ -1015,9 +1015,15 @@ footer > p::before {
   -webkit-box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
           box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
-.form-field:hover .labels {
-  -webkit-transform: trancelateX(20px);
-          transform: trancelateX(20px);
+.form-field:not(:-moz-placeholder-shown) {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.3) 60%, rgba(0, 0, 0, 0.1) 100%);
+}
+.form-field:not(:-ms-input-placeholder) {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.3) 60%, rgba(0, 0, 0, 0.1) 100%);
+}
+.form-field:not(:placeholder-shown) {
+  background: -webkit-gradient(linear, left top, right top, color-stop(60%, rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.1)));
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.3) 60%, rgba(0, 0, 0, 0.1) 100%);
 }
 
 .checkbox {
@@ -1043,11 +1049,36 @@ footer > p::before {
   margin-bottom: 25px;
 }
 
+.checkmark {
+  display: inline-block;
+  width: 21px;
+  height: 21px;
+  border: 2px solid rgb(227, 225, 225);
+  border-radius: 6px;
+  position: relative;
+  right: 205px;
+  -webkit-transition: all 500ms linear;
+  transition: all 500ms linear;
+  cursor: pointer;
+}
+
 .chkbx {
   position: absolute;
   top: 6px;
   left: 10px;
   display: inline-block;
+  width: 0;
+  height: 0;
+}
+
+.chkbx:checked ~ .checkmark {
+  border-top: rgba(227, 225, 225, 0);
+  border-left: rgba(227, 225, 225, 0);
+  border-radius: 0;
+  width: 14px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  border-color: rgb(62, 187, 9);
 }
 
 .form-button {
