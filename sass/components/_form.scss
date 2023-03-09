@@ -91,20 +91,16 @@
 }
 
 .chkbx:checked ~ .checkmark {
-	border-top:  rgba(227, 225, 225,0);
-	border-left:  rgba(227, 225, 225,0);
+
 	border-radius: 0;
 	width: 14px;
 	transform: rotate(45deg);
-	border-color: rgb(62, 187, 9);
+	border: 3px solid rgb(62, 187, 9);
+	border-top:  rgba(227, 225, 225,0);
+	border-left:  rgba(227, 225, 225,0);
+	
 }
 
-// .checkbox:checked .chkbx::after {
-// 	background-color: #ccc;
-//   }
-// .chkbx::after{
-
-// }
 
 .form-button {
 	top: 15px;
