@@ -43,6 +43,7 @@ const refs = {
 	body: document.querySelector("[data-last-element]"),
 	pointers: document.querySelectorAll(".pointer"),
 	loginButton: document.querySelector(".nav---btn"),
+	scrollUpBtn: document.querySelector('.return-to-top')
 };
 
 refs.pointers.forEach((event, key, array) => {
@@ -190,3 +191,17 @@ function validationForm() {
 		]);
 	});
 }
+
+
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+	if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+		refs.scrollUpBtn.style.display = "block";
+		refs.scrollUpBtn.style.opacity = 1;
+	} else {
+		refs.scrollUpBtn.style.opacity = 0;
+		refs.scrollUpBtn.style.display = "none";
+	}
+  }
