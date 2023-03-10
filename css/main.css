@@ -487,7 +487,7 @@ nav {
   background-image: url(../images/2b1966ee8e9994d4051d1154196acc0e.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 800px;
+  height: 100vh;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1115,10 +1115,8 @@ footer > p::before {
 
 .fancybox__content {
   background-color: transparent !important;
-}
-
-.fancybox__slide.has-iframe.has-close-btn.is-selected.is-done > .fancybox__content {
-  padding: 0;
+  -webkit-transition: padding 100ms ease-out;
+  transition: padding 100ms ease-out;
 }
 
 .fancybox__slide.has-iframe.has-close-btn.is-selected.is-done > .fancybox__content {

@@ -119,7 +119,7 @@ function makeForm() {
 				<input class="form-field password" type="password" name="password"placeholder=" "/>
 			</label>
 			<label class="checkbox">
-			<input class="chkbx" type="checkbox" name="agree" />
+			<input class="chkbx" type="checkbox" name="agree" disabled/>
 				<span class="chk-lbl">do you agree with <a href="" data-fancybox data-src="#my-site" style="
 				text-underline-offset: 4px;
 				color: inherit;
@@ -139,9 +139,11 @@ function validationForm() {
 	const submitBrtn = document.querySelector(".form-button");
 	const labelEl = document.querySelectorAll(".labels");
 
-	form.addEventListener("input", debounce(onInput, 500));
+	form.addEventListener("input", debounce(onInput, 150));
 
 	function onInput() {
+		
+
 		if (chkBox.checked === true && form[0].value !== "" && form[1].value !== "") {
 			submitBrtn.disabled = "";
 			submitBrtn.enebled;
@@ -158,7 +160,16 @@ function validationForm() {
 		} else {
 			labelEl.forEach(el => (el.style.cssText = "color: black; transition: color 300ms ease"));
 		}
+
 	}
+
+	const linkEl = document.querySelector('.chk-lbl > a')
+	linkEl.addEventListener('click', onLinkClick)
+
+	function onLinkClick(){
+		chkBox.disabled = ''
+	}
+
 	form.addEventListener("submit", e => {
 		console.log(JSON.parse(localStorage.getItem("loginData")));
 		localStorage.removeItem("loginData");
