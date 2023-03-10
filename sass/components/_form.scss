@@ -74,10 +74,10 @@
 	width: 21px;
 	height: 21px;
 	border: 2px solid rgb(227, 225, 225);
-	border-radius: 6px;
+	border-radius: 3px;
 	position: relative;
 	right: 205px;
-	transition: all 500ms linear;
+	transition: transform 300ms linear, 200ms border-color 100ms linear, 1000ms border-radius 200ms linear, 200ms width 100ms linear, 200ms border-width 100ms linear;
 	cursor: pointer;
 }
 
@@ -92,12 +92,14 @@
 
 .chkbx:checked ~ .checkmark {
 
-	border-radius: 0;
+
 	width: 14px;
-	transform: rotate(45deg);
-	border: 3px solid rgb(62, 187, 9);
-	border-top:  rgba(227, 225, 225,0);
-	border-left:  rgba(227, 225, 225,0);
+	border-width: 3px;
+	transform: rotateZ(45deg) scale(1.3);
+	border-color: rgb(62, 187, 9);
+	border-top-color:  rgba(227, 225, 225,0);
+	border-left-color:  rgba(227, 225, 225,0);
+
 	
 }
 
@@ -127,6 +129,4 @@
 .fancybox__content {
 	background-color: transparent !important;
 }
-.fancybox__content > .fancybox__iframe > .f-button.is-close-btn {
-	top: -7px !important;
-}
+
