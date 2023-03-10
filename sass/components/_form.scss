@@ -128,13 +128,17 @@
 }
 .fancybox__content {
 	background-color: transparent !important;
-	transition:  padding 1200ms linear 300ms;
+	// transition:  padding 1200ms linear 200ms;
 }
 
 .fancybox__slide.has-iframe.has-close-btn.is-selected.is-done > .fancybox__content {
 	padding: 0;
+}
 
+.fancybox__slide.has-iframe.has-close-btn.is-selected.is-done > .fancybox__content {
+	padding: 0;
 }
 .fancybox__iframe {
+
 	clip-path: inset(0 0 0 0 round 2%);
 }

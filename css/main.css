@@ -1115,8 +1115,10 @@ footer > p::before {
 
 .fancybox__content {
   background-color: transparent !important;
-  -webkit-transition: padding 1200ms linear 300ms;
-  transition: padding 1200ms linear 300ms;
+}
+
+.fancybox__slide.has-iframe.has-close-btn.is-selected.is-done > .fancybox__content {
+  padding: 0;
 }
 
 .fancybox__slide.has-iframe.has-close-btn.is-selected.is-done > .fancybox__content {
