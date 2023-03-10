@@ -1047,6 +1047,8 @@ footer > p::before {
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 25px;
+  -webkit-transition: color 400ms linear;
+  transition: color 400ms linear;
 }
 
 .checkmark {
@@ -1083,6 +1085,10 @@ footer > p::before {
   border-left-color: rgba(227, 225, 225, 0);
 }
 
+.chkbx:checked ~ .chk-lbl {
+  color: rgb(210, 231, 219);
+}
+
 .form-button {
   top: 15px;
   width: 100px;
@@ -1109,4 +1115,15 @@ footer > p::before {
 
 .fancybox__content {
   background-color: transparent !important;
+  -webkit-transition: padding 1200ms linear 300ms;
+  transition: padding 1200ms linear 300ms;
+}
+
+.fancybox__slide.has-iframe.has-close-btn.is-selected.is-done > .fancybox__content {
+  padding: 0;
+}
+
+.fancybox__iframe {
+  -webkit-clip-path: inset(0 0 0 0 round 2%);
+          clip-path: inset(0 0 0 0 round 2%);
 }/*# sourceMappingURL=main.css.map */

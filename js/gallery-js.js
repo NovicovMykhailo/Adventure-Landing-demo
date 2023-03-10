@@ -119,12 +119,12 @@ function makeForm() {
 				<input class="form-field password" type="password" name="password"placeholder=" "/>
 			</label>
 			<label class="checkbox">
+			<input class="chkbx" type="checkbox" name="agree" />
 				<span class="chk-lbl">do you agree with <a href="" data-fancybox data-src="#my-site" style="
 				text-underline-offset: 4px;
 				color: inherit;
 				margin-left: 6px;
 			">License</a></span>
-				<input class="chkbx" type="checkbox" name="agree" />
 				<span class="checkmark"></span>
 			</label>
 			<button class="button form-button" type="submit" disabled>login</button>
@@ -137,12 +137,11 @@ function validationForm() {
 	const form = document.querySelector("#form");
 	const chkBox = document.querySelector(".chkbx");
 	const submitBrtn = document.querySelector(".form-button");
-	const labelEl = document.querySelectorAll('.labels')
+	const labelEl = document.querySelectorAll(".labels");
 
 	form.addEventListener("input", debounce(onInput, 500));
 
 	function onInput() {
-		
 		if (chkBox.checked === true && form[0].value !== "" && form[1].value !== "") {
 			submitBrtn.disabled = "";
 			submitBrtn.enebled;
@@ -154,11 +153,10 @@ function validationForm() {
 			"loginData",
 			JSON.stringify(`{ UserName: ${form[0].value}, Password: ${form[1].value}, Agreenment: ${chkBox.checked}}`),
 		);
-		if(form[0].value !== "" || form[1].value !== ""){
-			
-			labelEl.forEach(el => el.style.cssText = 'color: rgb(227, 225, 225); transition: color 300ms ease')
-		}else{
-			labelEl.forEach(el => el.style.cssText = 'color: black; transition: color 300ms ease')
+		if (form[0].value !== "" || form[1].value !== "") {
+			labelEl.forEach(el => (el.style.cssText = "color: rgb(227, 225, 225); transition: color 300ms ease"));
+		} else {
+			labelEl.forEach(el => (el.style.cssText = "color: black; transition: color 300ms ease"));
 		}
 	}
 	form.addEventListener("submit", e => {
@@ -176,9 +174,8 @@ function validationForm() {
 				width: 600,
 				height: 677,
 				type: "iframe",
+				hideScrollbar: false,
 			},
 		]);
 	});
 }
-
-
