@@ -34,9 +34,9 @@
 	transition: transform 400ms ease-in-out 50ms, border-radius 400ms ease 50ms;
 
 	&:hover {
-		transform: scale(1.15);
-		border-radius: 8px;
-		z-index: 200;
+		transform: scale(1.15) !important;
+		border-radius: 8px !important;
+		z-index: 200 !important;
 	}
 }	
 

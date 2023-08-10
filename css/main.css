@@ -610,7 +610,7 @@ nav {
     height: 150vh;
   }
   .hero__icon-wrapper {
-    top: 340px;
+    top: 520px;
   }
 }
 .about {
@@ -703,12 +703,12 @@ nav {
   margin-bottom: 20px;
 }
 .gallery__pictureset img:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-  border-radius: 8px;
-  z-index: 1;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  -webkit-transform: scale(1.05) !important;
+          transform: scale(1.05) !important;
+  border-radius: 8px !important;
+  z-index: 1 !important;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px !important;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px !important;
 }
 
 .gallery__image {
@@ -897,10 +897,10 @@ nav {
   transition: transform 400ms ease-in-out 50ms, border-radius 400ms ease 50ms, -webkit-transform 400ms ease-in-out 50ms;
 }
 .invitation__photo > img:hover {
-  -webkit-transform: scale(1.15);
-          transform: scale(1.15);
-  border-radius: 8px;
-  z-index: 200;
+  -webkit-transform: scale(1.15) !important;
+          transform: scale(1.15) !important;
+  border-radius: 8px !important;
+  z-index: 200 !important;
 }
 
 .item-1 {

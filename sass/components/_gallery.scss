@@ -14,8 +14,6 @@
     transform: scale(0.9);
 	& img {
 
-		
-
 		width: calc((1200px - 2 * 110px) / 3);
 		object-fit: cover;
 		z-index: 0;
@@ -26,10 +24,10 @@
 			margin-bottom: 20px;
 		}
 		&:hover{
-			transform: scale(1.05);
-			border-radius: 8px;
-			z-index: 1;
-			box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+			transform: scale(1.05) !important;
+			border-radius: 8px !important;
+			z-index: 1 !important;
+			box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px !important;
 		}
 	}
 }
