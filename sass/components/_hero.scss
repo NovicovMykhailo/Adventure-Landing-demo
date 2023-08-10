@@ -54,4 +54,11 @@
 	animation: 5s ease-out infinite normal;
 }
 
+@media screen and (min-width: $desktop){
+ .hero{
+	height: 150vh;
+ }
+ .hero__icon-wrapper{
+	top: 340px }
 
+}

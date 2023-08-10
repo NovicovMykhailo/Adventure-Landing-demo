@@ -1,29 +1,26 @@
 html {
-    scroll-behavior: smooth;
-	
-
-  }
+	scroll-behavior: smooth;
+}
 body::-webkit-scrollbar {
 	display: none;
-  }
+}
 
-.body{
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-    background-color: $white-color;
+.body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	background-color: $white-color;
 	color: $primaryTextColor;
 	font-family: "Roboto", sans-serif;
 	font-weight: normal;
 	font-size: 14px;
 	letter-spacing: 0.03em;
-	line-height: 1.5;   
+	line-height: 1.5;
 }
 
-.container{
+.container {
 	width: $desktop;
 	margin: 0 auto;
 	text-align: center;
-	
 }
 
 .pointer:hover {
@@ -31,34 +28,40 @@ body::-webkit-scrollbar {
 	transform: scale(1.2);
 }
 
-
 .return-to-top {
-    position: fixed;
-    bottom: 40px;
-    right: 40px;
-    background: rgb(0, 0, 0);
-    background: rgba(0, 0, 0, 0.7);
-    width: 50px;
-    height: 50px;
-    display: block;
-    text-decoration: none;
-    border-radius: 35px;
-    display: none;
-    transition: all 0.3s ease;
+	position: fixed;
+	bottom: 40px;
+	right: 40px;
+	background: rgb(0, 0, 0);
+	background: rgba(0, 0, 0, 0.7);
+	width: 50px;
+	height: 50px;
+	display: block;
+	text-decoration: none;
+	border-radius: 35px;
+	display: none;
+	transition: all 0.3s ease;
 }
 .return-to-top i {
-    color: #fff;
-    margin: 0;
-    position: relative;
-    left: 16px;
-    top: 13px;
-    font-size: 19px;
-    transition: all 0.3s ease;
+	color: #fff;
+	margin: 0;
+	position: relative;
+	left: 16px;
+	top: 13px;
+	font-size: 19px;
+	transition: all 0.3s ease;
 }
 .return-to-top:hover {
-    background: rgba(0, 0, 0, 0.9);
+	background: rgba(0, 0, 0, 0.9);
 }
 .return-to-top:hover i {
-    color: #fff;
-    top: 5px;
+	color: #fff;
+	top: 5px;
+}
+
+
+@media screen and (min-width: $desktop){
+    .container{
+         width: 100%
+    }
 }

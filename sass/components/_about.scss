@@ -35,3 +35,8 @@
         animation-play-state: paused;
     }
 }
+
+@media screen and (min-width: $desktop) {
+    .about{
+        height: 730px;
+    }}

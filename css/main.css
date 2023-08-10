@@ -396,6 +396,11 @@ body::-webkit-scrollbar {
   top: 5px;
 }
 
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 100%;
+  }
+}
 .button {
   color: #2a2a2a;
   text-decoration: none;
@@ -519,6 +524,11 @@ nav {
           transform: scaleX(1);
 }
 
+@media screen and (min-width: 1200px) {
+  header {
+    width: 100%;
+  }
+}
 .hero {
   background-image: url(../images/2b1966ee8e9994d4051d1154196acc0e.jpeg);
   background-size: cover;
@@ -595,6 +605,14 @@ nav {
           animation: 5s ease-out infinite normal;
 }
 
+@media screen and (min-width: 1200px) {
+  .hero {
+    height: 150vh;
+  }
+  .hero__icon-wrapper {
+    top: 340px;
+  }
+}
 .about {
   text-align: center;
 }
@@ -644,6 +662,11 @@ nav {
           animation-play-state: paused;
 }
 
+@media screen and (min-width: 1200px) {
+  .about {
+    height: 730px;
+  }
+}
 .gallery {
   background-image: url(../images/86d9c6c21bf26d2b3ed027f777d359c7.png);
   height: 1100px;
@@ -787,19 +810,6 @@ nav {
   display: block;
   -webkit-transform: scale(1.02);
           transform: scale(1.02);
-}
-
-.travel__subtitle {
-  text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  margin-bottom: 20px;
-}
-
-.travel_description {
-  font-size: 14px;
-  line-height: 1.5;
-  font-weight: 500;
 }
 
 .pointer {

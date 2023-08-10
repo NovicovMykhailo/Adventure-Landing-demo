@@ -3,6 +3,7 @@
 	padding-bottom: 0;
     margin-top: -140px;
 	clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
+	
 }
 
 .travel__map-thumb {
@@ -11,6 +12,7 @@
 	background-repeat: no-repeat;
 	background-position: bottom;
 	display: flex;
+
 }
 .travel__image{
 	width: 100%;
@@ -22,8 +24,10 @@
 	width: 50%;
 	padding-bottom: 90px;
 }
+
 .travel__map {
 	width: 50%;
+
 	position: relative;
 	
 	&>img{
@@ -38,17 +42,7 @@
 
 }
 
-.travel__subtitle {
-	text-transform: uppercase;
-	font-weight: 700;
-	letter-spacing: 0.05em;
-	margin-bottom: 20px;
-}
-.travel_description {
-	font-size: 14px;
-	line-height: 1.5;
-	font-weight: 500;
-}
+
 .pointer {
 	fill: #3a6aa7;
 	transition: transform 250ms ease-in-out;
