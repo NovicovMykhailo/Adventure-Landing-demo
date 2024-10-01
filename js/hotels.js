@@ -15,7 +15,7 @@ const hotels = [
 	{
 		location: "Rio de Janeiro",
 		photo:
-			"https://cf.bstatic.com/xdata/images/hotel/max1024x768/121777279.jpg?k=ad9f7c9bfc435a508a61a70717a80a1e2eea565d3b1ccc722f9a6d8bc322447b&o=&hp=1",
+			"https://lirp.cdn-website.com/196b315e/dms3rep/multi/opt/15-800h.jpg",
 		address: "Rua Almirante Alexandrino 2305, Santa Teresa, Rio de Janeiro, Brasil",
 		description:
 			"Offering sea views and a year-round outdoor pool, Vila Santa Teresa Hotel & Spa is located in Rio de Janeiro's Santa Teresa district. The windows overlook the pool. It offers a sun terrace, a bar, free Wi-Fi throughout the hotel and free private parking on site.</p><p>Each room is equipped with air conditioning and a flat-screen TV with satellite channels. Some rooms have a seating area. In addition, some rooms have views of the garden or city. The private bathroom comes with bathrobes, slippers and free toiletries.</p><p>You can play tennis on site. Vila Santa Teresa Hotel & Spa is 2.5 km from Christ the Redeemer Statue and 2.6 km from Corcovado Mountain. The nearest airport is Santos Dumont Airport, 4 km from Vila Santa Teresa Hotel & Spa.</p><p>Couples especially like the location - they rated accommodation in the area for a couple trip at 9.3",
@@ -40,7 +40,7 @@ const hotels = [
 	{
 		location: "Jakarta, Indonesia",
 		photo:
-			"https://cf.bstatic.com/xdata/images/hotel/max1024x768/123047813.jpg?k=04e4480d7a89d554e0e55891c85b81bf3c59e01f9077d56138fe6eb08fb83928&o=&hp=1",
+			"https://www.hilton.com/im/en/JKTDIDI/1838085/jktdi-pool-side.jpg?impolicy=crop&cw=5184&ch=3375&gravity=NorthWest&xposition=0&yposition=40&rw=768&rh=500",
 		address: "Jl. Pegangsaan Timur No.17, Cikini, Jakarta, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10310, Indonesia",
 		description:"Noa's Boutique B&B is located in Antalya, 400 meters from Triumphant Hadrian's Gate and 600 meters from Mermerli Beach. Guests have access to a garden with a terrace. All rooms have air conditioning and free Wi-Fi.</p> <p>Each room has a minibar, coffee machine, kettle and flat-screen TV. Featuring a shower, private bathroom also comes with a hairdryer and free toiletries.</p><p>Car rental is available at Noa's Boutique Hotel, among other things.</p><p>Within 700 meters are the Saat-Kulesi clock tower and the yacht pier in the Old Town. The nearest airport is Antalya Airport, 9 km from Noa's Boutique Hotel.</p> <p>Couples especially like the location - they rated accommodation in the area for a couple trip at 9.3",
 		hotelName: "DoubleTree by Hilton Jakarta - Diponegoro",
